@@ -44,9 +44,8 @@ export const Navbar = () => {
         </ul>
       )}
       <div>
-      {isAuth ?<button>Выйти</button>:<Link to= {'/login'}>Войти</Link>}
+        {isAuth ? <button>Выйти</button> : <Link to={"/login"}>Войти</Link>}
       </div>
-
     </div>
   );
 };
