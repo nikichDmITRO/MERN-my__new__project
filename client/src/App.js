@@ -1,12 +1,12 @@
-import { Layout } from "./components/Layout";
+import { Layout } from "./components/Layout/Layout";
 import { Routes, Route } from "react-router-dom";
-import { MainPage } from "./pages/MainPage";
-import { AddPostPage } from "./pages/AddPostPage";
-import { EditPostPage } from "./pages/EditPostPage";
-import { LoginPage } from "./pages/LoginPage";
-import { PostPage } from "./pages/PostPage";
-import { PostsPage } from "./pages/PostsPage";
-import { RegisterPage } from "./pages/RegisterPage";
+import { MainPage } from "./pages/MainPage/MainPage";
+import { AddPostPage } from "./pages/AddPostPage/AddPostPage";
+import { EditPostPage } from "./pages/EditPostPage/EditPostPage";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { PostPage } from "./pages/PostPage/PostPage";
+import { PostsPage } from "./pages/PostsPage/PostsPage";
+import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 
 function App() {
   return (

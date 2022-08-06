@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { registerUser } from "../redux/features/auth/authSlice";
+import { registerUser } from "../../redux/features/auth/authSlice";
+
 export const RegisterPage = () => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -9,10 +10,11 @@ export const RegisterPage = () => {
 
   const handleSubmit = () => {
     try {
-      dispatch(registerUser({ username, password }));
+      dispatch(registerUser({ username, password}));
       console.log(username,password)
       setPassword("");
       setUserName("");
+      
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +22,7 @@ export const RegisterPage = () => {
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-      <h1>Авторизация</h1>
+      <h1>Регистрация</h1>
       <label>
         Username:
         <input value={username} onChange={(e) => setUserName(e.target.value)} />
@@ -31,11 +33,11 @@ export const RegisterPage = () => {
       </label>
 
       <div>
-        <button type="submit" className="mr-20" onClick={handleSubmit} >
+        <button type="submit"  onClick={handleSubmit} >
 
-          Войти
+          Подтвердить
         </button>
-        <Link to="/register">зарегистрироваться</Link>
+        <Link to="/register">Уже зарегестрирован?</Link>
       </div>
     </form>
   );

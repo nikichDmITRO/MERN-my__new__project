@@ -1,0 +1,30 @@
+.body {
+
+ background-color: blueviolet;
+  color: brown;
+ 
+  margin: 0 auto;
+  height:100px;
+}
+
+.bodyFlex {
+    margin-left: 300px;
+width: 400px;
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+.bodyLink {
+  font-size: 20px;
+  flood-color: burlywood;
+  text-decoration: none;
+}
+.button{
+    width: 100px;
+    height: 30px;
+    background-color: brown;
+    float: right;
+    margin-right: 50px;
+    border-radius: 10px;
+}

@@ -1,50 +1,48 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import s from "./Navbar.module.css";
 
 export const Navbar = () => {
-  const isAuth = false;
+  const isAuth =true;
 
   const activeStyles = {
     color: "gold",
   };
   return (
-    <div className="flex py-4 justify-between items-center">
-      <span className="flex justify-center items-center w-6 h-6 text-sx ">
-        E
-      </span>
+    <div className={s.body}>
       {isAuth && (
-        <ul className="flex-gap-8">
-          <li>
+        <div className={s.bodyFlex}>
+          <div>
             <NavLink
               to={"/"}
-              className="text-sx text-gray"
+              className={s.bodyLink}
               style={({ isActive }) => (isActive ? activeStyles : undefined)}
             >
               Главная
             </NavLink>
-          </li>
-          <li>
+          </div>
+          <div>
             <NavLink
               to={"/:id"}
-              className="text-sx text-gray"
+              className={s.bodyLink}
               style={({ isActive }) => (isActive ? activeStyles : undefined)}
             >
               Мои посты
             </NavLink>
-          </li>
-          <li>
+          </div>
+          <div>
             <NavLink
               to={"/new"}
-              className="text-sx text-gray"
+              className={s.bodyLink}
               style={({ isActive }) => (isActive ? activeStyles : undefined)}
             >
               Создать пост
             </NavLink>
-          </li>
-        </ul>
+          </div>
+        </div>
       )}
       <div>
-        {isAuth ? <button>Выйти</button> : <Link to={"/login"}>Войти</Link>}
+        {isAuth ? <button className={s.button}>Выйти</button> : <Link to={"/login"}>Войти</Link>}
       </div>
     </div>
   );
