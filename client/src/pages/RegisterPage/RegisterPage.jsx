@@ -25,11 +25,11 @@ export const RegisterPage = () => {
       <h1>Регистрация</h1>
       <label>
         Username:
-        <input value={username} onChange={(e) => setUserName(e.target.value)} />
+        <input type='text' value={username} onChange={(e) => setUserName(e.target.value)} />
       </label>
       <label>
         Password:
-        <input value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
 
       <div>
